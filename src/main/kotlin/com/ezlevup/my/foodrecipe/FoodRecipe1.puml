@@ -195,21 +195,21 @@ interface NotificationRepository  {
 ' 관계 정의
 
 ' Account 관계
-Account "1" -- "1" AccountType
-Account "1" -- "0..1" UserActivity
+Account "1" -- "1" AccountType : has >
+Account "1" -- "0..1" UserActivity : has >
 
 ' Review 관계
-Review "many" -- "1" Account
-Review "1" -- "1" ReviewReaction
+Review "many" -- "1" Account : written by <
+Review "1" -- "1" ReviewReaction : has >
 
 ' Notification 관계
-Notification "many" -- "1" Account
+Notification "many" -- "1" Account : sent to <
 
 ' Recipe 관계
-Recipe "1" *-- "many" Ingredient
-Recipe "1" *-- "many" Procedure
-Recipe "1" -- "many" Review
-Recipe "1" -- "1" Category
+Recipe "1" *-- "many" Ingredient : contains >
+Recipe "1" *-- "many" Procedure : contains >
+Recipe "1" -- "many" Review : has >
+Recipe "1" -- "1" Category : belongs to >
 Recipe "many" -- "1" Account : created by <
 
 @enduml
