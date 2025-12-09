@@ -68,12 +68,12 @@ data class CheckInEntity(
 - 오늘 날짜의 CheckIn 기록이 있고 completed=true → ✓ (완료)
 - 내일이 되면 자동으로 새 CheckIn 레코드 생성
 
----
+***
 화면
 
 <img width="589" height="824" alt="image" src="https://github.com/user-attachments/assets/8dbcf50e-b8bb-4b46-b2da-a5d0dd6da1f0" />
 
----
+***
 
 <img width="596" height="821" alt="image" src="https://github.com/user-attachments/assets/5f2d34cc-7ec9-4bdd-8129-7405a8a639fd" />
 
